@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xccdf:Tailoring xmlns:xccdf="http://checklists.nist.gov/xccdf/1.2" id="xccdf_scap-workbench_tailoring_default">
+  <xccdf:benchmark href="ssg-debian10-ds.xml"/>
+  <xccdf:version time="2022-05-31T14:08:24">1</xccdf:version>
+  <xccdf:Profile id="xccdf_org.ssgproject.content_profile_standard_customized" extends="xccdf_org.ssgproject.content_profile_standard">
+    <xccdf:title xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US" override="true">Standard System Security Profile for Debian 10 [CUSTOMIZED]</xccdf:title>
+    <xccdf:description xmlns:xhtml="http://www.w3.org/1999/xhtml" xml:lang="en-US" override="true">This profile contains rules to ensure standard security baseline
+of a Debian 10 system. Regardless of your system's workload
+all of these checks should pass.</xccdf:description>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_accounts" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_accounts-session" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_user_umask" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_umask_etc_profile" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_umask_etc_login_defs" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_root_paths" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_root_path_no_dot" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_root_path_dirs_no_write" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_file_permissions_home_dirs" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_polyinstantiated_var_tmp" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_polyinstantiated_tmp" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_max_concurrent_login_sessions" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_logon_fail_delay" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_accounts-restrictions" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_root_logins" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_securetty_root_login_console_only" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_restrict_serial_port_logins" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_no_password_auth_for_systemaccounts" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_no_direct_root_logins" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_root_gid_zero" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_no_uid_except_zero" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_password_storage" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_no_netrc_files" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_no_empty_passwords" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_gid_passwd_group_same" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_password_all_shadowed" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_password_expiration" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_password_warn_age_login_defs" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_password_minlen_login_defs" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_minimum_age_login_defs" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_accounts_maximum_age_login_defs" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_account_expiration" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_account_use_centralized_automated_auth" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_account_unique_name" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_accounts-physical" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_screen_locking" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_smart_card_login" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_console_screen_locking" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_accounts-pam" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_set_password_hashing_algorithm" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_password_quality" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_password_quality_pwquality" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_password_quality_pamcracklib" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_locking_out_password_attempts" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_rule_display_login_attempts" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_accounts-banners" selected="true"/>
+    <xccdf:select idref="xccdf_org.ssgproject.content_group_gui_login_banner" selected="true"/>
+  </xccdf:Profile>
+</xccdf:Tailoring>
